@@ -1,0 +1,54 @@
+@import '/src/styles/variables';
+
+
+
+
+
+section {
+    color: $fontColor;
+    font-family: $mainFont;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .planet-image {
+        height: 135px;
+        width: 135px;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .planet-surface-image {
+        height: 70px;
+        width: 70px;
+        position: absolute;
+        top: 18rem
+    }
+    
+    .planet-name {
+        font-weight: $regularFW;
+        font-size: $planetNameFontSize;
+        letter-spacing: $letterSpacing;
+        margin: 1.5rem;
+    }
+    .planet-content {
+        font-size: $pFontSize;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        line-height: 1.7rem;
+        letter-spacing: $letterSpacingSmaller;
+        width: clamp(200px, 90%, 400px);
+    }
+    .source {
+        font-size: $pFontSize;
+        color: #888888;
+        font-size: 1.5rem;
+        font-weight: $regularFW;
+
+        a {
+            margin-left: 0.5rem;
+            color: #888888;
+            font-weight: $bolderFW;
+            letter-spacing: $letterSpacingSmaller;
+        }
+    }
+}

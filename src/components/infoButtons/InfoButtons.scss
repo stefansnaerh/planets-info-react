@@ -1,0 +1,49 @@
+@import '/src/styles/variables';
+
+
+
+.info-buttons-container {
+    grid-row: 1 / 1 ;
+    display: flex;
+    justify-content: space-evenly;
+    height: 5rem;
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        button {
+            margin-top: auto;
+            background: none;
+            border: none;
+            color: $fontColor;
+            font-size: $buttonFontSize;
+            letter-spacing: $letterSpacing;
+            cursor: pointer;
+        }  
+        span {
+            margin-top: auto;
+            height: 5px;
+            width: 90%;
+            align-self: center;
+        }  
+    }
+
+}
+.large-gray-line {
+    align-self: center;
+    justify-self: center;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    left: 0; 
+    right: 0;
+  }
+
+
+

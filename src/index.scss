@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600&display=swap');
+
+@import './styles/variables';
+
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $backgroundColor;
+}
+
+
+main {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 7% 53% 30% ;
+  width: 100%;
+  height: 100%;
+  top: 12%;
+  
+}
