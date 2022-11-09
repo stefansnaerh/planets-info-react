@@ -4,6 +4,8 @@ I made this planets fact site using React and SASS including CSS GRID & FLEXBOX.
 
 I used useContext to handle the state between components which shows the skills neccesary to pass this project.
 
+The website is fully responsive between devices and accessible for screen readers.
+
 Hope you like it!
 
 I got the design from [Frontendmentor.io](https://frontendmentor.io)
