@@ -19,6 +19,7 @@ import Navbar from "../Navbar/Navbar";
 
 const Router = () => {
 
+// using reactRouter to handle different pages
     return (
             <>
             <BrowserRouter>
