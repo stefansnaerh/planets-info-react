@@ -1,0 +1,51 @@
+.planet-image {
+  grid-row: 2/2;
+  height: 135px;
+  width: 135px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.planet-surface-image {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: 18rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .planet-image {
+    grid-column: 2/4;
+    grid-row: 1/1;
+    justify-self: center;
+    height: 24rem;
+    width: 24rem;
+    margin: 0;
+  }
+  .planet-surface-image {
+    height: 9rem;
+    width: 9rem;
+    top: 25rem;
+  }
+}
+@media (min-width: 1366px) {
+  .planet-image {
+    grid-column: 1/4;
+    grid-row: 2/4;
+    height: 34rem;
+    width: 34rem;
+    justify-self: center;
+    align-self: center;
+  }
+  .planet-surface-image {
+    grid-column: 1/4;
+    grid-row: 2/4;
+    top: 32rem;
+    height: 12rem;
+    width: 12rem;
+  }
+}/*# sourceMappingURL=PlanetImage.css.map */

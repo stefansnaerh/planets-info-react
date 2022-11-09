@@ -8,17 +8,36 @@ html {
 }
 
 body {
-  background-color: $backgroundColor;
+  background: url(./assets/background-stars.svg) $backgroundColor;
 }
 
 
 main {
   position: absolute;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 7% 53% 30% ;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
   height: 100%;
-  top: 12%;
-  
+  top: 9rem;
+  font-family: $mainFont;
+  color: $fontColor
+}
+
+
+@media (min-width: 768px) {
+  main {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 3% 1fr 1fr 3%;
+    grid-template-rows: 50% 30% 1fr ;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+@media (min-width: 1366px) {
+  main {
+      grid-template-columns: 5% 1fr 1fr 1fr 5%;
+      grid-template-rows: 10% 1fr 1fr 1fr 5% ;
+  }
 }

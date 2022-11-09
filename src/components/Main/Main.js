@@ -2,6 +2,7 @@
 import InfoButtons from "../infoButtons/InfoButtons";
 import Statistics from "../statistics/Statistics";
 import PlanetInfo from "../planetInfo/PlanetInfo";
+import PlanetImage from "../planetImage/PlanetImage";
 import { createContext } from "react";
 import { useState } from "react";
 
@@ -18,6 +19,9 @@ const Main = ({planetData}) => {
         <main>
             <DataToDisplay.Provider value={{data, setData}}>
             <InfoButtons
+            planetData={planetData}
+            />
+            <PlanetImage
             planetData={planetData}
             />
             <PlanetInfo

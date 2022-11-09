@@ -4,6 +4,7 @@
 header {
   display: flex;
   flex-direction: column;
+  height: 8rem;
 }
 
 .logo {
@@ -19,7 +20,7 @@ header {
 }
   input + label {
     position: fixed;
-    top: 40px;
+    top: 35px;
     right: 40px;
     height: 20px;
     width: 25px; 
@@ -65,7 +66,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 8rem;
     z-index: 3;
     transition: .5s;
     transition-delay: .5s;
@@ -163,4 +164,68 @@ header {
     background-color: $neptuneColor;
   }
 
+
+
+  @media (min-width: 768px) {
+    
+  .logo {
+   left: 0;
+   right: 0;
+  }
+
+   span {
+    display: none;
+   }
+   label {
+    display: none
+   }
+   input{
+    display: none;
+   }
+   input ~ nav {
+    display: flex;
+    height: 130px;
+    transition: none;
+    transition-delay: 0s;
+     ul {
+      display: flex;
+      width: 100vw;
+      align-content: center;
+      padding: 0;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 7rem;
+      img {
+        display: none;
+        }
+      li {
+        opacity: 1;
+        .link {
+          font-size: $pFontSize;
+          padding: 0;
+        }
+      }
+    }
+   }
+   input:checked ~ nav {
+    height: 120px;
+   }
+  }
+
+
+  @media (min-width: 1366px) {
+    .logo {
+      right: auto;
+      top: 10px;
+      left: 40px;
+    }
+    input ~ nav {
+      height: 100px;
+      justify-content: flex-end;
+      ul {
+        position: static;
+        width: 70vw;
+      }
+    }
+  }
 

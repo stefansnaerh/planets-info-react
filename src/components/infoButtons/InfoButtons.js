@@ -8,18 +8,30 @@ const InfoButtons = ({planetData}) => {
     const {data, setData} = useContext(DataToDisplay)
 
     return (
-        <div>
+        <div className="info-container">
         <div className="info-buttons-container">
             <div className="button-container">
-                <button onClick={() => setData("overview")}>OVERVIEW</button>
+                <button 
+                aria-label="click to see overview"
+                style={data === "overview" && window.innerWidth >= 768 ? {backgroundColor: planetData.color} : null} 
+                onClick={() => setData("overview")}>OVERVIEW
+                </button>
                 <span style={data === "overview" ? {backgroundColor: planetData.color} : null} className="overview-line"></span>
             </div>
             <div className="button-container">
-                <button onClick={() => setData("structure")}>STRUCTURE</button>
+                <button 
+                aria-label="click to see structure"
+                style={data === "structure" && window.innerWidth >= 768 ? {backgroundColor: planetData.color} : null} 
+                onClick={() => setData("structure")}>STRUCTURE
+                </button>
                 <span style={data === "structure" ? {backgroundColor: planetData.color} : null} className="overview-line"></span>
             </div>
             <div className="button-container">
-                <button onClick={() => setData("surface")}>SURFACE</button>
+                <button 
+                aria-label="click to see surface"
+                style={data === "surface" && window.innerWidth >= 768  ? {backgroundColor: planetData.color} : null} 
+                onClick={() => setData("surface")}>SURFACE
+                </button>
                 <span style={data === "surface" ? {backgroundColor: planetData.color} : null} className="overview-line"></span>
             </div>
         </div>
@@ -27,5 +39,4 @@ const InfoButtons = ({planetData}) => {
         </div>
     )
 }
-
 export default InfoButtons

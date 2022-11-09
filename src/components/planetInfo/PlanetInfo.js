@@ -12,31 +12,27 @@ import { DataToDisplay } from "../Main/Main";
 const PlanetInfo = ({planetData}) => {
 
 const overview = <>
-<img alt="planet" className="planet-image" src={planetData.overview.image}></img>
-<h1 className="planet-name">{planetData.name.toUpperCase()}</h1>
-<p className="planet-content">{planetData.overview.content}</p>
-<p className="source">Source : <a href={planetData.overview.source}>Wikipedia</a><img alt="src-icon" src={sourceIcon}/></p>
+<h1 aria-label="planet name" className="planet-name">{planetData.name.toUpperCase()}</h1>
+<p aria-label="about planet overview" className="planet-content">{planetData.overview.content}</p>
+<p aria-label="link to source" className="source">Source : <a href={planetData.overview.source}>Wikipedia</a><img alt="src-icon" src={sourceIcon}/></p>
 </>
 
 const structure = <>
-<img alt="planet" className="planet-image" src={planetData.structure.image}></img>
-<h1 className="planet-name">{planetData.name.toUpperCase()}</h1>
-<p className="planet-content">{planetData.structure.content}</p>
-<p className="source">Source : <a href={planetData.structure.source}>Wikipedia</a><img alt="src-icon" src={sourceIcon}/></p>
+<h1 aria-label="planet name" className="planet-name">{planetData.name.toUpperCase()}</h1>
+<p aria-label="about planet structure" className="planet-content">{planetData.structure.content}</p>
+<p aria-label="link to source" className="source">Source : <a href={planetData.structure.source}>Wikipedia</a><img alt="src-icon" src={sourceIcon}/></p>
 </>
 
 const geology = <>
-<img alt="planet" className="planet-image" src={planetData.overview.image}></img>
-<img alt="planet" className="planet-surface-image" src={planetData.geology.image}></img>
-<h1 className="planet-name">{planetData.name.toUpperCase()}</h1>
-<p className="planet-content">{planetData.geology.content}</p>
-<p className="source">Source : <a href={planetData.geology.source}>Wikipedia</a><img alt="src-icon" src={sourceIcon}/></p>
+<h1 aria-label="planet name" className="planet-name">{planetData.name.toUpperCase()}</h1>
+<p aria-label="about planet geology" className="planet-content">{planetData.geology.content}</p>
+<p aria-label="link to source" className="source">Source : <a href={planetData.geology.source}>Wikipedia</a><img alt="src-icon" src={sourceIcon}/></p>
 </>
 
     const {data, setData} = useContext(DataToDisplay)
 
     return (
-        <section>
+        <div className="planet-text-container">
             {(() => {
                 if (data === "overview"){
                     return (overview)
@@ -46,7 +42,7 @@ const geology = <>
                 }
                 else return (geology)
             })()}
-        </section>
+        </div>
     )
 }
 

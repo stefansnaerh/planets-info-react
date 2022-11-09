@@ -24,5 +24,5 @@ export const data = {
     revolution: "224.7 Days",
     radius: "6,051.8 KM",
     temperature: "471°c",
-    color: "#F7CC7F"
+    color: "#EDA249"
   }
