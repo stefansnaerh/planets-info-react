@@ -4,8 +4,10 @@ import './InfoButtons.scss'
 import { DataToDisplay } from "../Main/Main";
 
 const InfoButtons = ({planetData}) => {
-
+    // getting the state from useContect and then applying it to the component
     const {data, setData} = useContext(DataToDisplay)
+
+
 
     return (
         <div className="info-container">
